@@ -1,0 +1,23 @@
+int n=grades.size();
+    vector<int>temp;
+    for(int i=0; i<n; i++){
+        if(grades[i]>=38){
+            if((grades[i]%5)==3){
+                temp.push_back(grades[i]+2);
+                cout<<endl;
+            }
+            else if((grades[i]%5)==4){
+                temp.push_back(grades[i]+1);
+                cout<<endl;
+            }
+            else{
+                temp.push_back(grades[i]);
+                cout<<endl;
+            }
+        }
+        else{
+            temp.push_back(grades[i]);
+            cout<<endl;
+        }
+    }
+    return temp;
