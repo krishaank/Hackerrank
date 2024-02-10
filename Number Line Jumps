@@ -1,0 +1,31 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    vector<int>temp;
+    vector<int>temp1;
+    int x1, v1, x2, v2;
+    cin>>x1>>v1>>x2>>v2;
+    for(int i=0; i<10000; i++){
+        x1=x1+v1;
+        x2=x2+v2;
+        temp.push_back(x1);
+        temp1.push_back(x2);
+            
+    }
+    int count=0;
+    for(int j=0; j<10000; j++){
+        if(temp[j]==temp1[j]){
+            count=1;
+        }  
+    }
+    if(count==0){
+        cout<<"NO";
+    }
+    else{
+        cout<<"YES";
+    }
+
+}
+   
+
