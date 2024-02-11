@@ -1,0 +1,21 @@
+int n=scores.size();
+    int min=0;
+    int max=0;
+    int i=0;
+    vector<int>temp;
+    int minimum=scores[i];
+    int maximum=scores[i];
+    for(int i=0; i<n; i++){
+    
+        if(minimum>scores[i]){
+            min++;
+            minimum=scores[i];
+        }
+        if(scores[i]>maximum){
+            max++;
+            maximum=scores[i];
+        }
+    }
+    temp.push_back(max);
+    temp.push_back(min);
+    return temp;
