@@ -1,0 +1,18 @@
+ vector<int>temp;
+    int n=a.size();
+    string c;
+    string b="YES";
+    string d="NO";
+    for(int i=0; i<n; i++){
+        if(a[i]<=0){
+            temp.push_back(a[i]);
+        }
+    }
+    int size=temp.size();
+    if(size>=k){
+        c=d;
+    }
+    else{
+        c=b;
+    }
+    return c;
