@@ -1,0 +1,28 @@
+    vector<int>temp;
+    vector<int>ans;
+    int n=p.size();
+    for(int i=1; i<=n; i++){
+        int count=1; 
+        for(int j=0; j<n; j++){
+            if(i!=p[j]){
+                count++;
+            }
+            else{
+                break;
+            }
+        }
+        temp.push_back(count);
+    }
+    for(int a=0; a<n; a++){
+        int c=1; 
+        for(int q=0; q<n; q++){
+            if(temp[a]!=p[q]){
+                c++;
+            }
+            else{
+                break;
+            }
+        }
+        ans.push_back(c);
+    }
+    return ans;
