@@ -1,0 +1,36 @@
+long long int op;
+    long size;
+    long mid;
+    long a;
+    long b;
+    long second;
+    vector<long>temp;
+    for(long long i=p; i<=q; i++){
+        op=i*i;
+        size=log10(op)+1;
+        mid=size/2;
+        if(size%2==0){
+           a=op/pow(10,mid);
+           b=a*pow(10,mid);
+           second=op-b;
+           if(a+second==i){
+               temp.push_back(i);
+           }
+        }
+        else if(size%2==1){
+            mid=mid+1;
+            a=op/pow(10,mid);
+           b=a*pow(10,mid);
+           second=op-b;
+           if(a+second==i){
+               temp.push_back(i);
+           }
+        }
+        
+    }
+    for(int k=0; k<temp.size(); k++){
+        cout<<temp[k]<<" ";
+    }
+    if(temp.size()==0){
+        cout<<"INVALID RANGE";
+    }
